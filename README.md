@@ -8,3 +8,4 @@ Facial Recognotion
   - say something outloud (maybe their name if it recognizes it from a database)
   - launch countdown timer
   - take photo
+
