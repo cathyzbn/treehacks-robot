@@ -34,7 +34,8 @@ class VideoManager():
                     self.video_off(cap)
                     break 
                 elif key_equal(key, 's'): # take a picture
-                    self.FRAME_OPS.img_capture(frame_with_face)
+                    self.FRAME_OPS.img_capture(frame_with_face) # TODO: change this to frame
+                    self.video_wait()
 
             except KeyboardInterrupt:
                 self.video_off()
