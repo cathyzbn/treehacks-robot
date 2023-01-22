@@ -8,6 +8,7 @@ class FrameOperations():
 
     def __init__(self):
         self.face_cascade = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
+        self.img_index = 0
 
     # Detects faces: 
     # - accepts frame as img
@@ -19,5 +20,10 @@ class FrameOperations():
         # Draw the rectangle around each face
         for (x, y, w, h) in faces:
             cv.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-    
+            
         return img
+
+    def img_capture(self, frame):
+        cv.imwrite(filename=f'imgs/{self.img_index}.jpg', img=frame)
+        print(f"Image number {self.img_index} saved!")
+        self.img_index = self.img_index + 1
