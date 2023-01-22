@@ -8,7 +8,7 @@ class FrameOperations():
 
     def __init__(self):
         self.face_cascade = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
-        self.distance = 0
+        self.distance = None
         self.img_index = 0
 
     # Detects faces: 
