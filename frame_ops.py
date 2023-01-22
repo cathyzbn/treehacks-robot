@@ -13,7 +13,7 @@ class FrameOperations():
 
     # Detects faces: 
     # - accepts frame as img
-    # - returns img with bounding bodes
+    # - returns img with bounding boxes
     def detect_faces(self, img):
         gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
         # Detect the faces
@@ -24,6 +24,9 @@ class FrameOperations():
     
         return img
 
+    # Detects hands:
+    # - accepts frame image
+    # - returns img with bounding boxes around hands (specific to 21 joints) 
     def detect_hands(self, frame):
         hands, img = self.hand_detector.findHands(frame)
 
