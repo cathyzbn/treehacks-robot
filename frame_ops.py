@@ -7,7 +7,7 @@ import numpy as np
 class FrameOperations():
 
     def __init__(self):
-        self.face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+        self.face_cascade = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
 
     # Detects faces: 
     # - accepts frame as img
