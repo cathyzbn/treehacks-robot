@@ -19,7 +19,8 @@ class VideoManager():
                     break
                 try:
                     # Facial detection
-                    frame = self.FRAME_OPS.detect_faces(frame)
+                    # frame = self.FRAME_OPS.detect_faces(frame)
+                    frame = self.FRAME_OPS.detect_hands(frame)
                     cv.imshow('Video Output', frame)
 
                 except Exception as e:
