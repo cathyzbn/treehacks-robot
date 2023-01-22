@@ -8,6 +8,7 @@ class FrameOperations():
 
     def __init__(self):
         self.face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+        self.distance = None
 
     # Detects faces: 
     # - accepts frame as img
@@ -19,5 +20,6 @@ class FrameOperations():
         # Draw the rectangle around each face
         for (x, y, w, h) in faces:
             cv.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+            self.distance = 4500 / w
     
         return img
