@@ -30,10 +30,10 @@ class VideoManager():
                     frame_with_face = self.FRAME_OPS.detect_faces(frame)
                 cv.imshow('Video Output', frame_with_face)
 
-                if key_equal(key, 'q'):
+                if key_equal(key, 'q'): # quit program
                     self.video_off(cap)
-                    break
-                elif key_equal(key, 's'):
+                    break 
+                elif key_equal(key, 's'): # take a picture
                     self.FRAME_OPS.img_capture(frame_with_face)
 
             except KeyboardInterrupt:
